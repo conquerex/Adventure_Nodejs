@@ -24,13 +24,18 @@
       document.write(3+1);
     </script>
     <br>
-    <input type="button" name="" value="Night" onclick="
-      document.querySelector('body').style.backgroundColor = 'black';
-      document.querySelector('body').style.color = 'white';
-    ">
-    <input type="button" name="" value="Day" onclick="
-      document.querySelector('body').style.backgroundColor = 'white';
-      document.querySelector('body').style.color = 'black';
+    <input id="night_day" type="button" name="" value="Night" onclick="
+      var target = document.querySelector('body');
+      if(this.value === 'day') {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        document.querySelector('#night_day').value = 'night';
+      } else {
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        document.querySelector('#night_day').value = 'day';
+      }
+
     ">
     <br>
     <h1 style="color:blue;background-color:coral">JavaScript</h1>
