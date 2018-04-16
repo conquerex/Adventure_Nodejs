@@ -5,6 +5,15 @@
     <title>JS-Sample no.2</title>
   </head>
   <body>
+    <input type="button" value="change color" onclick="
+      var slist = document.querySelectorAll('h1');
+      var i = 0;
+      while(i < slist.length) {
+          console.log(slist[i]);
+          slist[i].style.color = 'red';
+          i = i + 1;
+      }
+    ">
     <h1>Comparison Operators & Boolean</h1>
     <script>
       document.write(1===1);
@@ -27,5 +36,26 @@
       }
       document.write("4<br>");
     </script>
+    <!-- Conditional Satement -->
+    <h1>Array</h1>
+    <script>
+      var coworkers = ["John", "Kim", "Doe", "Tofu"];
+    </script>
+    <script>
+      document.write(coworkers[1]+"<br>");
+      document.write(coworkers.length+"<br>");
+      coworkers.push("Tofu"+"<br>");
+      coworkers.push("Lee"+"<br>");
+      document.write(coworkers.length+"<br>");
+    </script>
+    <!-- Loop -->
+    <h1>Loop</h1>
+    <ul>
+      <script>
+        for (var i = 0; i < coworkers.length; i++) {
+          document.write("<li>"+coworkers[i]+"</li>");
+        }
+      </script>
+    </ul>
   </body>
 </html>
