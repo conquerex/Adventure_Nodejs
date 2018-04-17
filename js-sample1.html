@@ -22,20 +22,22 @@
     <script>
       document.write('Hello world;;;');
       document.write(3+1);
+      function nightDayHandler(self){
+        var target = document.querySelector('body');
+        if(self.value === 'day') {
+          target.style.backgroundColor = 'white';
+          target.style.color = 'black';
+          self.value = 'night';
+        } else {
+          target.style.backgroundColor = 'black';
+          target.style.color = 'white';
+          self.value = 'day';
+        }
+      }
     </script>
     <br>
     <input id="night_day" type="button" name="" value="Night" onclick="
-      var target = document.querySelector('body');
-      if(this.value === 'day') {
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
-        document.querySelector('#night_day').value = 'night';
-      } else {
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
-        document.querySelector('#night_day').value = 'day';
-      }
-
+      nightDayHandler(this);
     ">
     <br>
     <h1 style="color:blue;background-color:coral">JavaScript</h1>
