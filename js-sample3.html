@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS - Sample3</title>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+      var coworkers = {
+        "programmer": "Jongkook",
+        "designer": "Barley"
+      }
+      document.write("P type : "+coworkers.programmer+"<br>");
+      document.write("D type : "+coworkers.designer+'<br>');
+      coworkers.bookkeeper = "Sam";
+      coworkers["data scientist"] = "Lay"
+      document.write("B type : "+coworkers.bookkeeper+'<br>');
+      document.write("S type : "+coworkers["data scientist"]+'<br>');
+    </script>
+
+    <h2>Iterate</h2>
+    <script>
+      for(var key in coworkers) {
+        document.write(key + " ::: ");
+        document.write(coworkers[key] + '<br>');
+      }
+    </script>
+
+    <h2>Property & Method</h2>
+    <script>
+      coworkers.showAll = function(workers) {
+        for(var key in workers) {
+          document.write(key + " ::: ");
+          document.write(coworkers[key] + '<br>');
+        }
+      }
+      coworkers.showAll(coworkers);
+    </script>
+  </body>
+</html>
