@@ -1,5 +1,7 @@
 // greeting.js
 
-export function greeting(name) {
-  console.log("Hello, " + name);
+export class Greeting {
+  sayHello(name) {
+    console.log("Hello, " + name);
+  }
 }

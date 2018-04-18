@@ -1,4 +1,7 @@
 // module/main.js
 
-import {greeting} from 'greeting.js';
-greeting('JK');
+import {Greeting} from 'greeting.js';
+
+let g = new Greeting();
+g.sayHello("Kook");
+// greeting('JK');
