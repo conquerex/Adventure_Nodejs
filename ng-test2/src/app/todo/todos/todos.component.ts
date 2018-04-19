@@ -24,11 +24,10 @@ export class TodosComponent implements OnInit {
     todo.done = !todo.done
   }
 
-  addTodo(newText: string) {
+  addTodo(text: string) {
     this.todos.push({
-      done: false,
-      text: newText
-    });
-    this.newText = '';
+      done : false,
+      text : text
+    })
   }
 }

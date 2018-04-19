@@ -8,8 +8,7 @@
   </div>
 </div>
 <div>
-  <input type="text" placeholder="할 일 추가" [(ngModel)]="newText" >
-  <button name="button" (click)="addTodo(newText)">Add</button>
+  <app-add-todo (onTodoAdded)="addTodo($event)"></app-add-todo>
 </div>
 <div>
   {{newText}}
