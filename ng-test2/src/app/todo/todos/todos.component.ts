@@ -22,6 +22,6 @@ export class TodosComponent implements OnInit {
   }
 
   toggleTodo(todo) {
-    todo.done = !todo/done
+    todo.done = !todo.done
   }
 }

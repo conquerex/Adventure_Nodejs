@@ -3,10 +3,11 @@
   <h2>4월 19일</h2>
 </div>
 <div>
-  <div *ngFor="let todo of todos" (click)="todo.done = !todo.done" >
+  <div *ngFor="let todo of todos" (click)="toggleTodo(todo)" >
     <input type="checkbox" [checked]="todo.done" >{{todo.text}}
   </div>
-
+{{todos[0].done}}
+{{todos[1].done}}
 </div>
 <div>
   <input type="text" placeholder="할 일 추가" >
