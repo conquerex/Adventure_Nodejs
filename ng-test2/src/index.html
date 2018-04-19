@@ -8,20 +8,6 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
 
-  <script src="https://unpkg.com/systemjs/dist/system.js"></script>
-  <script>
-    SystemJS.config({
-      baseURL: '/module',
-      transpiler: 'plugin-babel',
-      map : {
-        'plugin-babel' : 'https://unpkg.com/systemjs-plugin-babel/plugin-babel.js',
-        'systemjs-babel-build' : 'https://unpkg.com/systemjs-plugin-babel/systemjs-babel-browser.js',
-      }
-    });
-  </script>
-  <script>
-    SystemJS.import('main.js');
-  </script>
 </head>
 <body>
   <app-root></app-root>
