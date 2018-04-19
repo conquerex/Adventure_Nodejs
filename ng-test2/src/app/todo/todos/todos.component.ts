@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent implements OnInit {
-
+  newText = '';
   todos: {
     done: boolean,
     text: string
@@ -23,5 +23,13 @@ export class TodosComponent implements OnInit {
 
   toggleTodo(todo) {
     todo.done = !todo.done
+  }
+
+  addTodo(newText: string) {
+    this.todos.push({
+      done: false,
+      text: newText
+    });
+    this.newText = '';
   }
 }
