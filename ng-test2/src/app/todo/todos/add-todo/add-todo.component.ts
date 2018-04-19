@@ -9,7 +9,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styles: [`
     :host {
       display: block;
-      padding: 16px;
+      padding: 16px 16px 16px 10px;
       background-color: white;
     }
 
