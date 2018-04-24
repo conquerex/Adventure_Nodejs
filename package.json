@@ -16,7 +16,8 @@
   },
   "homepage": "https://github.com/conquerex/Adventure_Nodejs#readme",
   "dependencies": {
-    "formidable": "^1.2.1"
+    "formidable": "^1.2.1",
+    "underscore": "^1.9.0"
   },
   "devDependencies": {},
   "keywords": [],
