@@ -4,12 +4,13 @@ var app = express();
 // 템플릿 엔진 세팅
 app.set('view engine', 'pug');
 app.set('views', './views');
+app.locals.pretty = true;
 
 app.use(express.static('public'));
 
 // 템플릿 엔진에 만들어진 파일을 렌더링하는 과정
 app.get('/template', function(req, res){
-  res.render('temp');
+  res.render('temp', {time:Date(), _title:'My pug'});
 });
 
 app.get('/', function(req, res) { // router
