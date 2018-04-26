@@ -17,21 +17,30 @@ app.get('/', function(req, res) { // router
   res.send('<h1>This is Home page.</h1>'); // controller
 });
 
-app.get('/topic', function(req, res) { // router
+// symentic url
+app.get('/topic/:id', function(req, res) { // router
   var topics = [
     'Red', 'Blue', 'Green'
   ];
 
+  // non-symentic link and symentic url
   var output = `
     <a href="/topic?id=0">First color</a><br>
     <a href="/topic?id=1">Second color</a><br>
     <a href="/topic?id=2">Third color</a><br>
-    <h1>${topics[req.query.id]}</h1>
+    <h1>${topics[req.params.id]}</h1>
   `;
   res.send(output);
 
+  // non-symentic url, Query String
   // res.send(`<h1>${topics[req.query.id]}</h1>`); // controller
 });
+
+// symentic url
+app.get('/topic/:id/:mode', function(req, res){
+  res.send(req.params.id +' , '+ req.params.mode);
+});
+
 app.get('/route', function(req, res) {
   res.send('Hello Router <br><img src="/nodejs-dark.jpg">');
 });
