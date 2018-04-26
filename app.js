@@ -1,4 +1,5 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
 
 // 템플릿 엔진 세팅
@@ -7,6 +8,7 @@ app.set('views', './views');
 app.locals.pretty = true;
 
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({extended: false}));
 
 // 템플릿 엔진에 만들어진 파일을 렌더링하는 과정
 app.get('/template', function(req, res){
@@ -44,6 +46,12 @@ app.get('/topic/:id/:mode', function(req, res){
 app.get('/form', function(req, res){
   res.render('form');
 })
+
+app.post('/form-receiver', function(req, res){
+  var title = req.body.title;
+  var description = req.body.description;
+  res.send(title + ' , ' + description);
+});
 
 app.get('/form-receiver', function(req, res){
   var title = req.query.title;
