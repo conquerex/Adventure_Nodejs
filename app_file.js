@@ -9,6 +9,11 @@ app.get('/topic/new', function(req, res){
     // res.send('Hello file~!!!!');
     res.render('new');
 });
+
+app.post('/topic', function(req, res){
+    res.send('Hi. This method is POST!!!');
+});
+
 app.listen(3000, function(){
     console.log('Connected, 3000 port!!!');
 });
