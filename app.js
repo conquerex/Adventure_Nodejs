@@ -1,6 +1,17 @@
 var express = require('express');
 var app = express();
+
+// 템플릿 엔진 세팅
+app.set('view engine', 'pug');
+app.set('views', './views');
+
 app.use(express.static('public'));
+
+// 템플릿 엔진에 만들어진 파일을 렌더링하는 과정
+app.get('/template', function(req, res){
+  res.render('temp');
+});
+
 app.get('/', function(req, res) { // router
   res.send('<h1>This is Home page.</h1>'); // controller
 });
