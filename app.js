@@ -41,6 +41,10 @@ app.get('/topic/:id/:mode', function(req, res){
   res.send(req.params.id +' , '+ req.params.mode);
 });
 
+app.get('/form', function(req, res){
+  res.render('form');
+})
+
 app.get('/route', function(req, res) {
   res.send('Hello Router <br><img src="/nodejs-dark.jpg">');
 });
