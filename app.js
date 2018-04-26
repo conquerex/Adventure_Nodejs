@@ -16,6 +16,22 @@ app.get('/template', function(req, res){
 app.get('/', function(req, res) { // router
   res.send('<h1>This is Home page.</h1>'); // controller
 });
+
+app.get('/topic', function(req, res) { // router
+  var topics = [
+    'Red', 'Blue', 'Green'
+  ];
+
+  var output = `
+    <a href="/topic?id=0">First color</a><br>
+    <a href="/topic?id=1">Second color</a><br>
+    <a href="/topic?id=2">Third color</a><br>
+    <h1>${topics[req.query.id]}</h1>
+  `;
+  res.send(output);
+
+  // res.send(`<h1>${topics[req.query.id]}</h1>`); // controller
+});
 app.get('/route', function(req, res) {
   res.send('Hello Router <br><img src="/nodejs-dark.jpg">');
 });
