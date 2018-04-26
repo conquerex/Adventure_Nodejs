@@ -49,7 +49,7 @@ app.get('/form-receiver', function(req, res){
   var title = req.query.title;
   var des = req.query.description;
   res.send(title + ' , ' + des);
-})
+});
 
 app.get('/route', function(req, res) {
   res.send('Hello Router <br><img src="/nodejs-dark.jpg">');
