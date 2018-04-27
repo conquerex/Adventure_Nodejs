@@ -15,6 +15,11 @@ app.get('/topic/new', function(req, res){
     res.render('new');
 });
 
+app.get('/topic', function(req, res) {
+    res.render('view');
+});
+
+
 app.post('/topic', function(req, res){
     var title = req.body.title;
     var description = req.body.description;
