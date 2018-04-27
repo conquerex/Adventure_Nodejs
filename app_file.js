@@ -16,7 +16,13 @@ app.get('/topic/new', function(req, res){
 });
 
 app.get('/topic', function(req, res) {
-    res.render('view');
+    fs.readdir('data', function(err, files){
+        if(err){
+            console.log(err);
+            res.status(500).send('Internal Server Error!!!'); 
+        }
+        res.render('view', {topics:files});
+    });
 });
 
 
